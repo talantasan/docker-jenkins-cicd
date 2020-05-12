@@ -1,0 +1,5 @@
+version: '3'
+services:
+    my_jenkins:
+        container_name: jenkins
+        image: jenkins
