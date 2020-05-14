@@ -1,7 +1,10 @@
 FROM centos:7
 MAINTAINER talant.py@gmail.com
 RUN  yum update -y && \
-     yum install -y openssh-server && \
+     yum install -y openssh-server mysql curl && \
+     curl -O https://bootstrap.pypa.io/get-pip.py && \
+     python get-pip.py --user && \
+     pip3 install awscli --upgrade --user && \
      useradd centos && \
      echo "mypass123" | passwd centos --stdin && \
      mkdir /home/centos/.ssh && \
