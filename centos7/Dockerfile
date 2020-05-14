@@ -15,7 +15,7 @@ RUN chown -R centos:centos /home/centos/.ssh && \
 RUN yum install -y mysql
 
 RUN  curl -O https://bootstrap.pypa.io/get-pip.py && \
-     python get-pip.py --user && \
+     python get-pip.py && \
      pip install awscli --upgrade 
 
 RUN /usr/sbin/sshd-keygen
