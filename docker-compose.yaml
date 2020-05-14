@@ -9,5 +9,12 @@ services:
             - "$PWD/jenkins-data:/var/jenkins_home"
         networks:
             - net
+    my_centos:
+        container_name: centos
+        image: mycentos
+        build:
+            context: centos7
+        networks:
+            - net
 networks:
     net:  
