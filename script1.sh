@@ -8,3 +8,4 @@ if [ "$SHOW" = "true" ]; then
     echo "Hello $NAME $SURNAME"
 else
     echo "If you want to see the please check show option"
+fi
