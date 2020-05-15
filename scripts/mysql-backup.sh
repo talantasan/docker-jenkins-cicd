@@ -1,5 +1,5 @@
 #!/bin/bash
-DATE=$(date +'%d-%h-%y')
+DATE=$(date +'%T+%m+%Y')
 DB_NAME=$1
 DB_HOST=$2
 DB_PASSWD=$3
