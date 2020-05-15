@@ -7,6 +7,9 @@ RUN  yum update -y && \
      mkdir /home/centos/.ssh && \
      chmod 0700 /home/centos/.ssh
 
+RUN  mv /etc/localtime  /etc/localtime.backup && \
+     ln -s /usr/share/zoneinfo/America/New_York /etc/localtime
+
 COPY centos-key.pub /home/centos/.ssh/authorized_keys
 
 RUN chown -R centos:centos /home/centos/.ssh && \
